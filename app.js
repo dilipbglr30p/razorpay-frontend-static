@@ -7,16 +7,15 @@ document.getElementById("pay-btn").onclick = async function () {
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ amount: 50000 }), // ₹500
     });
-
     const order = await response.json();
     console.log("✅ Order created:", order);
 
     const options = {
-      key: "rzp_test_XXXXXXXXXXXXXX", // your Razorpay key
+      key: "rzp_test_XXXXXXXXXXXX", // your Razorpay test key
       amount: order.amount,
       currency: "INR",
-      name: "Demo Payment",
       order_id: order.id,
+      name: "Demo Payment",
       handler: function (response) {
         alert("Payment successful!");
         console.log(response);
@@ -29,4 +28,3 @@ document.getElementById("pay-btn").onclick = async function () {
     console.error("❌ Error:", err);
   }
 };
-

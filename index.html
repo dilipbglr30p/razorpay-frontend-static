@@ -3,15 +3,23 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://checkout.razorpay.com; connect-src 'self' https://api.razorpay.com https://lumberjack-cx.razorpay.com https://razorpay-supabase-backend-production.up.railway.app; font-src 'self' data:; style-src 'self' 'unsafe-inline'; img-src 'self' data: https:; frame-src https://api.razorpay.com;">
   <title>Razorpay Payment Demo</title>
-  <link rel="stylesheet" href="style.css">
-  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
-</head>
-<body>
-  <h2>Pay ₹500</h2>
-  <button id="pay-btn">Pay Now</button>
 
-  <script src="app.js"></script>
+  <!-- ✅ Secure CSP allows Railway backend -->
+  <meta
+    http-equiv="Content-Security-Policy"
+    content="default-src 'self'; connect-src 'self' https://api.razorpay.com https://lumberjack-cx.razorpay.com https://razorpay-supabase-backend-production.up.railway.app; script-src 'self' https://checkout.razorpay.com;">
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <div class="container">
+    <h2>Pay ₹500</h2>
+    <button id="pay-btn">Pay Now</button>
+  </div>
+
+  <!-- ✅ Load Razorpay + external JS -->
+  <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+  <script src="./app.js"></script>
 </body>
 </html>

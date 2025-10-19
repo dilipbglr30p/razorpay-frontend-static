@@ -14,13 +14,21 @@ body {
   padding: 20px;
 }
 
+.container {
+  background: white;
+  padding: 40px;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  text-align: center;
+}
+
 h2 {
   color: #333;
   margin-bottom: 20px;
   font-size: 24px;
 }
 
-#payBtn {
+#pay-btn {
   background-color: #528FF0;
   color: white;
   border: none;
@@ -32,13 +40,13 @@ h2 {
   transition: all 0.3s ease;
 }
 
-#payBtn:hover {
+#pay-btn:hover {
   background-color: #3d7ad9;
   transform: translateY(-2px);
   box-shadow: 0 4px 12px rgba(82, 143, 240, 0.4);
 }
 
-#payBtn:active {
+#pay-btn:active {
   transform: translateY(0);
 }
 
